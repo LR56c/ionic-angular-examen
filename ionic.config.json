@@ -1,0 +1,7 @@
+{
+  "name": "ionic-angular-examen",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
