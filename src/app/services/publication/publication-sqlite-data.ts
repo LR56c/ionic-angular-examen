@@ -65,7 +65,7 @@ export class PublicationSqliteData extends PublicationRepository {
 	async addPublication( publication: Publication ): Promise<boolean> {
 		try{
 			const sql = `INSERT INTO ${this.DB_TABLE_NAME} (${this.DB_COL_ID}, ${this.DB_COL_TITLE}, ${this.DB_COL_DESCRIPTION}, ${this.DB_COL_IMAGE}, ${this.DB_COL_CREATE_AT}) VALUES (?, ?, ?, ?, ?)`
-			const values = [publication.id, publication.title, publication.description, publication.image, publication.createdAt]
+			const values = [publication.id, publication.title, publication.description, publication.image, publication.createdAt.toISOString()]
 			await this.db.run(sql, values)
 			return true
 		}
@@ -77,7 +77,7 @@ export class PublicationSqliteData extends PublicationRepository {
 	async updatePublication( publication: Publication ): Promise<boolean> {
 		try{
 			const sql = `UPDATE ${this.DB_TABLE_NAME} SET ${this.DB_COL_TITLE} = ?, ${this.DB_COL_DESCRIPTION} = ?, ${this.DB_COL_IMAGE} = ?, ${this.DB_COL_CREATE_AT} = ? WHERE ${this.DB_COL_ID} = ?`
-			const values = [publication.title, publication.description, publication.image, publication.createdAt, publication.id]
+			const values = [publication.title, publication.description, publication.image, publication.createdAt.toISOString(), publication.id]
 			await this.db.run(sql, values)
 			return true
 		}
