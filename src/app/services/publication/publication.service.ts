@@ -43,7 +43,6 @@ export class PublicationService {
       createdAt: new Date(decodeTime( id2 ))
     } )
     await this.getPublications()
-    console.log('seedPublications', this._publications)
   }
 
   private async getPublications(): Promise<void> {

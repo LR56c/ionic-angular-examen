@@ -4,11 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-publication-card',
   templateUrl: './publication-card.component.html',
   styleUrls: ['./publication-card.component.scss'],
+  standalone: true,
 })
-export class PublicationCardComponent  implements OnInit {
+export class PublicationCardComponent {
 
   constructor() { }
-
-  ngOnInit() {}
 
 }

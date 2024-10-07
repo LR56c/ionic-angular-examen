@@ -4,11 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-publication-skeleton',
   templateUrl: './publication-skeleton.component.html',
   styleUrls: ['./publication-skeleton.component.scss'],
+  standalone: true,
 })
-export class PublicationSkeletonComponent  implements OnInit {
+export class PublicationSkeletonComponent {
 
   constructor() { }
-
-  ngOnInit() {}
 
 }
