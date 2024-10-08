@@ -1,3 +1,14 @@
-<p>
-  publications-list works!
-</p>
+<div class="w-screen h-full flex flex-col items-start gap-3 p-3">
+<ng-container class="w-full" *ngIf="loaded">
+  <app-publication-card
+    *ngFor="let p of publications"
+    (deletePublication)="openModal($event)"
+    [publication]="p"
+  ></app-publication-card>
+</ng-container>
+<ng-container *ngIf="!loaded">
+  <app-publication-skeleton
+    *ngFor="let i of [0,1,2,3,4]"
+  ></app-publication-skeleton>
+</ng-container>
+</div>

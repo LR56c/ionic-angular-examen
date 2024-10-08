@@ -1,20 +1,18 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar mode="ios">
     <ion-title>
-      Blank
+      Publicaciones
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="w-screen h-full flex flex-col">
+      <app-publications-list></app-publications-list>
+    <ion-fab class="p-8" slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button [routerLink]="['/publication']">
+        <ion-icon class="text-white" name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
   </div>
 </ion-content>
