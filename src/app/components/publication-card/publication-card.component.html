@@ -2,9 +2,15 @@
   <ion-img class="object-center object-contain h-20 basis-[30%]"
     [src]="publication.image"/>
   <div class="text-center basis-[30%]">{{ publication.title }}</div>
-  <div class="text-center basis-[20%]">{{ publication.createdAt | date:'y-MM-dd' }}</div>
+  <div class="text-center basis-[20%]">
+    {{ publication.createdAt | date:'y-MM-dd' }}
+  </div>
   <button (click)="onDelete()" id="open-modal" class="basis-[20%]">
     <ion-icon class="text-blue-500"
       name="trash-outline"></ion-icon>
   </button>
 </div>
+
+
+
+

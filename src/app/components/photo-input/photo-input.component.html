@@ -1,6 +1,7 @@
 <div class="flex flex-col gap-2">
   <div class="flex items-center gap-2">
-  <button (click)="onPhotoChange()" class="flex max-h-fit items-center bg-gray-700 gap-2 text-white p-2 text-sm rounded-2xl">
+  <button (click)="onPhotoChange()"
+    class="flex max-h-fit items-center bg-gray-700 gap-2 text-white p-2 text-sm rounded-2xl">
     <ion-icon name="camera-outline"></ion-icon>
     <span>{{ label }}</span>
   </button>
@@ -8,3 +9,5 @@
   </div>
   <ion-text *ngIf="touched && errors" class="text-sm" color="danger">{{ errorText }}</ion-text>
 </div>
+
+

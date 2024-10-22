@@ -50,10 +50,6 @@ export class PublicationsListComponent implements OnInit{
         })
     }
 
-  async onDelete(id: string): Promise<void> {
-    // await this.publicationService.deletePublication(id)
-  }
-
   async openModal(id : string) {
     const modal = await this.modalController.create({
       component: PublicationModalComponent,
